@@ -52,6 +52,11 @@ public static class MauiAppBuilderExtensions
             return;
         }
 
+        if (RetryQueue.Current.IsRunning)
+        {
+            return;
+        }
+
         _ = Task.Run(async () =>
         {
             try

@@ -29,8 +29,8 @@
     <PackageProjectUrl>https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue</PackageProjectUrl>
     <RepositoryUrl>https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.0</Version>
-    <PackageReleaseNotes>Initial release: named failed-operation retries with 30s / 2min / 10min backoff, jitter, persistence, network gate, cancellation, and a dead-letter queue.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Reliability fixes for races, dispose/lifecycle, and lock or session correctness.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

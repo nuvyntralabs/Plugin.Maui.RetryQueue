@@ -279,7 +279,7 @@ sealed class RetryQueueEngine : IRetryQueue, IAsyncDisposable
                 return;
             }
 
-            _workerCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+            _workerCts = new CancellationTokenSource();
             var token = _workerCts.Token;
             var count = Math.Max(1, _options.WorkerCount);
             _workers = Enumerable.Range(0, count)
@@ -379,6 +379,12 @@ sealed class RetryQueueEngine : IRetryQueue, IAsyncDisposable
         try
         {
             await ExecuteAsync(record, context, cancellationToken).ConfigureAwait(false);
+            var after = await _store.FindByIdAsync(record.Id, CancellationToken.None).ConfigureAwait(false);
+            if (after is null || after.Status == RetryOperationStatus.Cancelled)
+            {
+                return;
+            }
+
             await CompleteSuccessAsync(record, started).ConfigureAwait(false);
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
@@ -470,6 +476,7 @@ sealed class RetryQueueEngine : IRetryQueue, IAsyncDisposable
         record.CompletedAt = _clock.UtcNow;
         record.LeaseOwner = null;
         record.LeaseExpiresAt = null;
+        _live.TryRemove(record.Id, out _);
         await _store.UpdateAsync(record, CancellationToken.None).ConfigureAwait(false);
         Raise(OperationFailed, new RetryFailedEventArgs(record.ToInfo(), exception, willRetry: false, nextDelay: null));
         Raise(OperationDeadLettered, new RetryEventArgs(record.ToInfo()));
