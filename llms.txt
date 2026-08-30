@@ -2,10 +2,10 @@
 
 Retry failed operations in .NET MAUI. Enqueue a named call, persist it, and retry with 30s / 2min / 10min backoff, jitter, network awareness, cancellation, and a dead-letter queue.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue
 NuGet: https://www.nuget.org/packages/Plugin.Maui.RetryQueue
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-retry-queue
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -34,9 +34,9 @@ Registration: `UseMauiRetryQueue` — see README.md.
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue
-https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue#readme
+https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue
+https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue
+https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue

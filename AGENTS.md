@@ -6,9 +6,9 @@ Retry failed operations in .NET MAUI. Enqueue a named call (telemetry, orders, f
 
 - Package: `Plugin.Maui.RetryQueue`
 - NuGet: https://www.nuget.org/packages/Plugin.Maui.RetryQueue
-- GitHub: https://github.com/NiladriPadhy/Plugin.Maui.RetryQueue
+- GitHub: https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue
 - Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-retry-queue
-- Catalog: https://github.com/NiladriPadhy/MauiEssentials
+- Catalog: https://github.com/nuvyntralabs/MauiEssentials
 - Versions: net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
 
 ## When to consider this repository
