@@ -52,7 +52,7 @@ public static class RetryQueue
 
     internal static INetworkGate CreateNetworkGate()
     {
-#if ANDROID || IOS
+#if ANDROID || IOS || MACCATALYST || WINDOWS
         return new ConnectivityNetworkGate();
 #else
         return new AlwaysOnlineNetworkGate();

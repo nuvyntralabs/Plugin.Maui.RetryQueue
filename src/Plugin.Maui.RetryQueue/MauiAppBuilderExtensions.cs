@@ -36,8 +36,10 @@ public static class MauiAppBuilderExtensions
             {
 #if ANDROID
                 events.AddAndroid(android => android.OnResume(_ => ResumeDrain()));
-#elif IOS
+#elif IOS || MACCATALYST
                 events.AddiOS(ios => ios.OnActivated(_ => ResumeDrain()));
+#elif WINDOWS
+                events.AddWindows(windows => windows.OnActivated((_, _) => ResumeDrain()));
 #endif
             });
         }
