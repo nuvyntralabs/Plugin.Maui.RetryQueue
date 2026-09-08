@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5
+
+- Align the documented pack artifact version with the library version
+- Re-validate enqueue, backoff, dead letter, SQLite persist, and DrainAsync (22 tests)
+
 ## 1.0.0
 
 - Failed-operation retry queue for .NET MAUI on iOS and Android

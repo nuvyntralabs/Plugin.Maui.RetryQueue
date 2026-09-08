@@ -195,7 +195,7 @@ dotnet build samples/Plugin.Maui.RetryQueue.Sample/Plugin.Maui.RetryQueue.Sample
 dotnet pack src/Plugin.Maui.RetryQueue/Plugin.Maui.RetryQueue.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.RetryQueue.1.0.0.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.RetryQueue.1.0.5.nupkg`.
 
 ## License
 

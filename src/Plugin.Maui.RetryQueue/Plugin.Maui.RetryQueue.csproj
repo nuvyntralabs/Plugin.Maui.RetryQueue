@@ -33,8 +33,8 @@
     <PackageProjectUrl>https://nuvyntralabs.github.io/packages/plugin-maui-retry-queue/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.4</Version>
-    <PackageReleaseNotes>Add Mac Catalyst and Windows TFMs for the shared (non-native) implementation.</PackageReleaseNotes>
+    <Version>1.0.5</Version>
+    <PackageReleaseNotes>Re-validation: align pack artifact version. Tests and sample cover enqueue, 30s/2min/10min backoff, dead letter, and DrainAsync.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
