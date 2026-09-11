@@ -4,7 +4,7 @@ Retry failed operations in .NET MAUI. Enqueue a named call, persist it, and retr
 
 Repository: https://github.com/nuvyntralabs/Plugin.Maui.RetryQueue
 NuGet: https://www.nuget.org/packages/Plugin.Maui.RetryQueue
-Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-retry-queue
+Paper: https://nuvyntralabs.github.io/packages/plugin-maui-retry-queue/
 Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
